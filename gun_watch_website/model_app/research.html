@@ -1,0 +1,14 @@
+{% extends "model_app/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<center><h1>Research</h1></center>
+<h2>Natural Language Processing Model</h2>
+<center><img src="{% static 'model_app/model.png' %}" alt="Model", height="300"></center>
+<p>Natural Language Processing models learn pieces and structures of language and text so they can analyze text and understand how humans speak. Using this ability we specficially looked at their ability to understand the sentiment within a text message to see if it has indications of a high degree of anger, indicating some sort of hate speech, but more importantly we utilized a highly curated dataset to make sure it wasn't just interpretting someone as angry, rather we are truly identifying if they are likely to do something which coul cause gun violence thorugh hate speech. The specific pipeline that we used was to collect tokenize the text using a Bag of Words model which allows us to understand the features of the text numerically and also reduce the feature space by lowering the words to their root form, letting the NLP algorithm truly understnad how the text is working and conveying what it is said to be. After that we train it on these tokenized words, so we can actually see it understand the features of the text which is indicating to the model what establishes if a piece of text is hate speech or not, and after that the model is tested using real world data to see how accurate it was, and we were able to see an accuracy of 90%. </p>
+<h2>Pipeline</h2>
+<center><img src="{% static 'model_app/pipeline.png' %}" alt="Pipeline", height="300"></center>
+
+<p>A rigirous Natural Language Processing Model was developed such that it would have the ability to detect the difference between text that is hate speech and text which doesn't seem to indicate real intent to do something which could cause a problem. Using this we are able to create a streamlied process to go through popular online forums and track which locations are indicating clear intent of hate while also referencing the word gun or words around it, such that we are able to truly understand that there is risk at that location. Through this we are further are able to see the geographic location of these messages, which allow us to see the geographic hotspots which clearly indicate that there might be intent for gun violence.</p>
+{% endblock %}

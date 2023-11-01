@@ -1,0 +1,19 @@
+{% extends "model_app/base.html" %}
+
+{% block title %}Hotspot Map{% endblock %}
+
+{% block content %}
+{{ map_html | safe }}
+{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Welcome to the Hotspot Map</h1>
+<!-- Add content for your hotspot map here -->
+
+<a href="{{ home_page_url }}">Go to Home</a>
+
+<div id="map"></div>
+
+
+</html>

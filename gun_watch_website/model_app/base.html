@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'model_app/styles.css' %}">
+    <title>{% block title %}Gun Watch{% endblock %}</title>
+    <style>
+        /* CSS styles for the "Gun Watch" text */
+        .header {
+            text-align: center;
+            font-size: 48px; /* Adjust the font size as needed */
+            color: #007BFF; /* Adjust the color as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <b>Gun Watch</b>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'hotspot_map' %}">Hotspot Map</a></li>
+            <li><a href="{% url 'about_me' %}">About Me</a></li>  <!-- Link to About Me page -->
+            <li><a href="{% url 'research' %}">Research</a></li>  <!-- Link to Research page -->
+        </ul>
+    </nav>
+    
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
